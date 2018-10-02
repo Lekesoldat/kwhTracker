@@ -1,5 +1,5 @@
-# kwhTracker
-For tracking expenses and electricity usage.
+# kWhTracker
+For tracking electricity usage and its cost.
 
 
 # Dependencies
