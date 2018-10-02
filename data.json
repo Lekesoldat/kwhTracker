@@ -1,14 +1,14 @@
 [
     {
         "Date": "11.08.2018",
-        "Measurement": "048661.0",
+        "Measurement": 48661.0,
         "Consumption": 0,
         "Calculated Price": 0
     },
     {
         "Date": "25.09.2018",
-        "Measurement": "050580.2",
+        "Measurement": 50580.2,
         "Consumption": 1919.2,
-        "Calculated Price": 2116.8776
+        "Calculated Price": 2116.99
     }
 ]
