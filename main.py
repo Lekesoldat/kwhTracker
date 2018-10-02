@@ -3,9 +3,9 @@ from prettytable import PrettyTable
 
 # Create table and setup headers and alignment
 table = PrettyTable()
-table.field_names = ['DATE', 'MEASUREMENT', 'CONSUMPTION', 'CALCULATED PRICE']
+table.field_names = ['DATE', 'MEASUREMENT', 'CONSUMPTION SINCE LAST ENTRY', 'CALCULATED PRICE']
 table.align["MEASUREMENT"] = 'r'
-table.align["CONSUMPTION"] = 'r'
+table.align["CONSUMPTION SINCE LAST ENTRY"] = 'r'
 table.align["CALCULATED PRICE"] = 'r'
 
 # Electricity price Øre/kWh
@@ -59,7 +59,6 @@ def printData():
 def newEntry(date, measurement):
     # Grab existing data
     d = readJSON()
-    print(d)
 
     # Calculate difference since last entry
     consumption = measurement - d[-1]['Measurement']
@@ -80,5 +79,20 @@ def newEntry(date, measurement):
     # Overwrites current data with new updated data
     with open('./data.json', 'w') as json_data:
         json.dump(d, json_data, indent=4)
+    
+    print("Data added. Updated table: ")
+    printData()
 
+
+def main():
+    date = input("Todays date? (DD.MM.YYYY)\n> ")
+    consumption = float(input("What does the Power Meter say? (Ignore first 0)\n> "))
+
+    newEntry(date, consumption)
+
+# Comment switch, remove '#' on next line to toggle code block
+#'''
 printData()
+'''
+main()
+#'''
