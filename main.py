@@ -33,22 +33,24 @@ def readCSV():
 
 def readJSON():
     with open('data.json') as json_data:
-        # Load data
-        d = json.load(json_data)
+    # Load data
+        return json.load(json_data)
 
-        # Traverse .JSON file
-        for i in range(len(d)):
+def printData():
+    # Get data
+    d = readJSON()
 
-            # Structure data
-            date = d[i]['Date']
-            measurement = d[i]['Measurement']
-            consumption = d[i]['Consumption']
-            price = round(float(d[i]['Calculated Price']))
+    for i in range(len(d)):
+        # Structure data
+        date = d[i]['Date']
+        measurement = d[i]['Measurement']
+        consumption = d[i]['Consumption']
+        price = round(float(d[i]['Calculated Price']))
 
-            # Add new row to table
-            table.add_row([date, str(measurement) + " kWh", str(consumption) + " kWh", str(price) + " kr"])
+        # Add new row to table
+        table.add_row([date, str(measurement) + " kWh", str(consumption) + " kWh", str(price) + " kr"])
         
-        print(table)
+    print(table)
 
-readJSON()
+printData()  
 
