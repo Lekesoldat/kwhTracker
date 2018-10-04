@@ -1,5 +1,6 @@
 import json
 from prettytable import PrettyTable
+from constants import *
 
 # Create table and setup headers and alignment
 table = PrettyTable()
@@ -7,9 +8,6 @@ table.field_names = ['DATE', 'MEASUREMENT', 'CONSUMPTION SINCE LAST ENTRY', 'CAL
 table.align["MEASUREMENT"] = 'r'
 table.align["CONSUMPTION SINCE LAST ENTRY"] = 'r'
 table.align["CALCULATED PRICE"] = 'r'
-
-# Electricity price Øre/kWh
-EL_PRICE = 110 / 100
 
 # Reads file and prints a PrettyTable to the terminal.
 def readCSV():
