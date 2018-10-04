@@ -1,2 +1,4 @@
 # macOS
 .ds_store
+
+__pycache__
