@@ -1,5 +1,7 @@
 # kWhTracker
-For tracking electricity usage and its costs.
+## For tracking electricity usage and its costs.
+
+![Image of program in use](./img/exampleRun.png "Example of use")
 
 
 # Dependencies
