@@ -10,5 +10,11 @@
         "Measurement": 50580.2,
         "Consumption": 1919.2,
         "Calculated Price": 2116.99
+    },
+    {
+        "Date": "05.10.2018",
+        "Measurement": 50970.9,
+        "Consumption": 390.70,
+        "Calculated Price": 429.77
     }
 ]
