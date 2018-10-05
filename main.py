@@ -9,29 +9,6 @@ table.align["MEASUREMENT"] = 'r'
 table.align["CONSUMPTION SINCE LAST ENTRY"] = 'r'
 table.align["CALCULATED PRICE"] = 'r'
 
-# Reads file and prints a PrettyTable to the terminal.
-def readCSV():
-    with open('./data.csv', 'r') as doc:
-        for line in doc:
-            # Ignores first line
-            if line.startswith('#'):
-                pass
-                
-            else:
-                # Prepare line
-                row = line.strip().split(',')
-
-                # Structure the data
-                date = row[0]
-                measurement = row[1]
-                consumption = row[2]
-                price = round(float(row[3]), 2)
-
-                # Add new row to table
-                table.add_row([date, str(measurement) + " kWh", str(consumption) + " kWh", str(price) + " kr"])
-    
-    print(table)
-
 def readJSON():
     with open('data.json') as json_data:
     # Load data
@@ -59,7 +36,7 @@ def newEntry(date, measurement):
     d = readJSON()
 
     # Calculate difference since last entry
-    consumption = measurement - d[-1]['Measurement']
+    consumption = round(measurement - d[-1]['Measurement'], 2)
     
     price = round(consumption * EL_PRICE, 2)
 
