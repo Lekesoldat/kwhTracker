@@ -47,7 +47,6 @@ def printData():
         
     print(table)
 
-
 def newEntry(date, measurement):
     # Grabs previous measurement, - sorted by id´s
     previous = measurements.find().limit(1).sort([('_id', pymongo.DESCENDING)]).next()
@@ -79,7 +78,7 @@ def main():
     newEntry(date, consumption)
 
 # Comment switch, remove '#' on next line to toggle code block
-'''
+#'''
 printData()
 '''
 main()
