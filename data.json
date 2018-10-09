@@ -1,20 +1,20 @@
 [
     {
-        "Date": "11.08.2018",
-        "Measurement": 48661.0,
-        "Consumption": 0,
-        "Calculated Price": 0
+        "date": "11.08.2018",
+        "measurement": 48661.0,
+        "consumption": 0,
+        "calculatedPrice": 0
     },
     {
-        "Date": "25.09.2018",
-        "Measurement": 50580.2,
-        "Consumption": 1919.2,
-        "Calculated Price": 2116.99
+        "date": "25.09.2018",
+        "measurement": 50580.2,
+        "consumption": 1919.2,
+        "calculatedPrice": 2116.99
     },
     {
-        "Date": "05.10.2018",
-        "Measurement": 50970.9,
-        "Consumption": 390.70,
-        "Calculated Price": 429.77
+        "date": "05.10.2018",
+        "measurement": 50970.9,
+        "consumption": 390.70,
+        "calculatedPrice": 429.77
     }
 ]
