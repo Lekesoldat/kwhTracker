@@ -23,7 +23,6 @@ db = client.kwhtracker
 # Grab the collection
 measurements = db.measurements
 
-
 # - - - - - - - - - - - - - - - - - - T A B L E  S E T U P - - - - - - - - - - - - - - - - - - 
 
 # Create table and setup headers and alignment
@@ -33,6 +32,7 @@ table.align["MEASUREMENT"] = 'r'
 table.align["CONSUMPTION SINCE LAST ENTRY"] = 'r'
 table.align["CALCULATED PRICE"] = 'r'
 
+# - - - - - - - - - - - - - - - - - - F U N C T I O N S - - - - - - - - - - - - - - - - - - - 
 
 def printData():
     # Iterates all documents in the collection
