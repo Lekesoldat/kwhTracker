@@ -5,7 +5,11 @@
 
 
 # Dependencies
-PrettyTable for showing results.
+pipenv for dependencies.
 ```bash
-pip3 install PrettyTable
+$ pip3 install pipenv
+$ pipenv install
+$ DB_USERNAME=... DB_PASSWORD=... pipenv run python3 main.py
 ```
+
+
